@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "878f0a06fe7c062a",
+        "id": "b94ed137d68bda5d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Tools/Security.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tools/Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Tools/Security.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -129,17 +121,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "878f0a06fe7c062a",
+  "active": "b94ed137d68bda5d",
   "lastOpenFiles": [
-    "Tools/Links.md",
-    "Information/Links.md",
     "Tools/Network.md",
-    "To-Do.md",
+    "Tools/Monitoring.md",
     "Tools/Security.md",
+    "To-Do.md",
     "Tools/Linux.md",
+    "Tools/Links.md",
+    "Tools/General.md",
     "Tools/Forensic.md",
-    "School/DETE.md",
-    "School/BUDG.md",
-    "Information/CVSS.md"
+    "Information/Links.md",
+    "School/DETE.md"
   ]
 }
