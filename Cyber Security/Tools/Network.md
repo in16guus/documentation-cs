@@ -74,6 +74,11 @@ http.request.method == "GET"
 
 ![[CleanShot 2022-08-29 at 20.48.53.png]]
 
+### Statistik zu Protokollen anzeigen
+1. Auf Statistics > Protocol Hierarchy klicken
+2. Unter Transmission Controll Protocl sieht man die Anzahl von Paketen mit Informationen zu der Häufigkeit
+![[CleanShot 2022-09-27 at 19.35.19.png]]
+
 ## [tshark](https://tshark.dev/)
 - Package anaylizer
 - Kann live Network Traffic abhören
@@ -102,17 +107,17 @@ pip3 install scapy
 ### Syntax
 - TCP Port öffnen und abhören:
 ```
-nc -l [Port]
+nc -l -p [Port]
 ```
 
 -  TCP Port öffnen, abhören: und Output in File schreiben:
 ```
-nc -l [Port] > file
+nc -l -p [Port] > file
 ```
 
 - Datei senden:
 ```
-nc -l [IP] [Port] < file
+nc [IP] [Port] < file
 ```
 
 - Port-Scan:
@@ -208,27 +213,32 @@ window -i 2
 ### Syntax
 - Einfacher Scan
 ```
-nmap -A -v [IP]
+nmap -A -v [Host]
 ```
 
 - Scan alle Ports
 ```
-nmap -A -v -p 0-65535 [IP]
+nmap -A -v -p 0-65535 [Host]
+```
+
+- Stealth Scan (schnell)
+```
+nmap -Ss [Host]
 ```
 
 - Bruteforce PostgreSQL
 ```
-nmap -p [Port] --script pgsql-brute --script-args userdb=usernames.txt,passdb=passwd.txt [IP]
+nmap -p [Port] --script pgsql-brute --script-args userdb=usernames.txt,passdb=passwd.txt [Host]
 ```
 
 - Bruteforce SSH
 ```
-nmap -p [Port] --script ssh-brute --script-args userdb=usernames.txt,passdb=passwd.txt [IP]
+nmap -p [Port] --script ssh-brute --script-args userdb=usernames.txt,passdb=passwd.txt [Host]
 ```
 
 - Bruteforce FTP
 ```
-nmap -p [Port] --script ftp-brute [IP]
+nmap -p [Port] --script ftp-brute [Host]
 ```
 
 ## [Snort](https://www.snort.org/)
@@ -248,6 +258,7 @@ nmap -p [Port] --script ftp-brute [IP]
 - sdrop - Block aber kein Log
 
 ### Rules
+- [Online Rules Builder](http://www.cyb3rs3c.net/)
 - Header
 	- Aktion
 	- Protokoll
@@ -350,3 +361,23 @@ SecRule RESPONSE_BODY "@verifyCC \d{13,16}" "phase:4,id:1,t:none,log,capture,
 ![[CleanShot 2022-08-15 at 20.45.14.png]]
 
 ![[CleanShot 2022-08-15 at 20.46.01.png]]
+
+## netstat
+- Tool für Informationen über offene Ports / Aktive Verbindungen anzuzeigen
+- Unter Windows / Linux anwendbar
+
+### Syntax
+- Zeigt PID für TCP Port an (Windows)
+```
+netstat -ano -p tcp | find [PORT]
+```
+
+- Zeigt PID für TCP Port an (Linux)
+```
+netstat -ano -p tcp | grep [PORT]
+```
+
+- Statistiken über TCP anzeigen
+```
+netstat -s -p tcp
+```

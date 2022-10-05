@@ -53,3 +53,13 @@ json2csv -i [JSON-Pfad] -o [CSV-Pfad]
 hashcat -m 0 --show hash-file rockyou.txt
 ```
 
+## PID an Prozess zuordnen
+- PID Prozess zuordnen (Windows)
+```
+tasklist | find [PID]
+```
+
+- PID Prozess zuordnen (Linux)
+```
+ps -ef | grep [PID]
+```

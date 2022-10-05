@@ -32,6 +32,7 @@
 - [Coding in Browser](https://replit.com/)
 - [#CVSS Calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
 - [#CVSS Alternative: BSI-Schwachstellenbeurteilung](https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Buerger-CERT-Sicherheitshinweise/Risikostufen/risikostufen.html)
+- [OWASP Risk Assessment Calculator](https://javierolmedo.github.io/OWASP-Calculator/)
 - [Mail Spam Test](https://www.mail-tester.com/)
 - [RegExr: Learn / Build / Test RegEx](https://regexr.com/)
 - [Codepasting](https://paste.ofcode.org/)
@@ -62,3 +63,4 @@
 - [CrackStation - Wordlist](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm)
 - [Windows Event Logs (1)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor)
 - [Windows Event Logs (2)](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
+- [Informationen zu Bildern (mit steghide)](https://www.aperisolve.com/)
